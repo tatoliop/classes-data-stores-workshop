@@ -1,0 +1,67 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "SQLite API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/movie/get/": {
+      "get": {
+        "description": "Returns the movies stored in the database",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/movie/put/": {
+        "post": {
+          "description": "Write a movie to the database",
+          "consumes": [
+            "application/json"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Input",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "example": "My_movie"
+                  },
+                  "year": {
+                    "type": "integer",
+                    "example": "2024"
+                  },
+                  "score": {
+                    "type": "integer",
+                    "example": "4"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            },
+            "406": {
+              "description": "Missing parameters on input"
+            },
+            "500": {
+              "description": "Error during the ingestion"
+            }
+          }
+        }
+      }
+  }
+}
