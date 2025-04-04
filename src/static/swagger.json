@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "SQLite API",
+    "title": "MongoDB API",
     "version": "1.0.0"
   },
   "paths": {
@@ -19,7 +19,7 @@
       }
     },
     "/movie/put/": {
-        "post": {
+        "put": {
           "description": "Write a movie to the database",
           "consumes": [
             "application/json"

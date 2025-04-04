@@ -2,4 +2,4 @@ pymongo
 Flask==3.0.2
 flask_swagger_ui
 flask_pymongo
-neo4j
+flask-cors
