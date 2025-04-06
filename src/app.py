@@ -40,7 +40,7 @@ def movie_get():
     return jsonify(results)
 
 # Write data
-@app.route("/movie/put/", methods=["PUT"])
+@app.route("/movie/put/", methods=["POST"])
 def movie_put():
     in_data = request.get_json()
     if "title" not in in_data or "year" not in in_data or "score" not in in_data:

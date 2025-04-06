@@ -55,7 +55,7 @@ document.getElementById('movieForm').addEventListener('submit', function(event) 
 
     // Call Flask API to add the movie to the database
     fetch('http://127.0.0.1:8080/movie/put/', {
-        method: 'PUT',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
