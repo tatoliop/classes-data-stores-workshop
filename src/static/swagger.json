@@ -19,8 +19,8 @@
       }
     },
     "/movie/put/": {
-        "put": {
-          "description": "Write a movie to the database",
+        "post": {
+          "description": "Store a movie to the database",
           "consumes": [
             "application/json"
           ],
